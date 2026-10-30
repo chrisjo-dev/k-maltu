@@ -4,256 +4,281 @@
 <meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
+:root {
+  --hanji:    #ede6cf;
+  --ink:      #1c1610;
+  --ink-60:   rgba(28, 22, 16, 0.60);
+  --ink-35:   rgba(28, 22, 16, 0.35);
+  --ink-18:   rgba(28, 22, 16, 0.18);
+  --ink-08:   rgba(28, 22, 16, 0.08);
+  --seal:     #b83219;
+  --seal-faint: rgba(184, 50, 25, 0.08);
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   width: 1280px;
   height: 640px;
-  background: #0b0c10;
+  background-color: var(--hanji);
+  /* subtle hanji fiber texture */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
   overflow: hidden;
   position: relative;
-  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
 }
 
-/* Subtle dot grid */
-.bg {
+/* 광곽(廣廓): 바깥 굵은 선 + 안쪽 가는 선 */
+.gwangwak {
   position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(0,255,163,0.07) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-/* Ambient glow */
-.glow-left {
-  position: absolute;
-  left: -120px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 480px;
-  height: 480px;
-  background: radial-gradient(ellipse, rgba(0,255,163,0.09) 0%, transparent 70%);
+  inset: 20px;
+  border: 3px solid var(--ink);
+  /* 안쪽에 여백 남기고 가는 선 하나 더 */
+  box-shadow:
+    inset 0 0 0 10px var(--hanji),
+    inset 0 0 0 11px var(--ink-35);
   pointer-events: none;
-}
-.glow-right {
-  position: absolute;
-  right: -80px;
-  top: -80px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(ellipse, rgba(255,107,53,0.06) 0%, transparent 70%);
-  pointer-events: none;
+  z-index: 10;
 }
 
-.wrap {
-  position: relative;
-  z-index: 1;
-  width: 1280px;
-  height: 640px;
+/* 내용 영역: 광곽 안쪽 (20 outer + 3 border + 10 gap + 1 inner = 34px) */
+.page {
+  position: absolute;
+  inset: 34px;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  padding: 48px 64px;
+  grid-template-columns: 444px 30px 1fr;
+  z-index: 1;
 }
 
-/* TOP NAV */
-.topbar {
+/* ── LEFT: 정보 ─────────────────────── */
+.info {
+  padding: 28px 32px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--ink-18);
+}
+
+.logo-row {
   display: flex;
   align-items: center;
   gap: 14px;
 }
-.logo-sq {
-  width: 44px; height: 44px;
-  background: #00ffa3;
-  border-radius: 10px;
+
+/* 인장(印章): 붉은 도장 */
+.seal-icon {
+  width: 52px; height: 52px;
+  background: var(--seal);
+  border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  font-size: 20px;
-  color: #0b0c10;
-  letter-spacing: -0.03em;
   flex-shrink: 0;
+  position: relative;
+  /* 도장 안쪽 이중 테두리 */
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 220, 200, 0.30),
+    inset 0 0 0 4px transparent,
+    0 1px 4px rgba(28, 22, 16, 0.18);
 }
+.seal-icon::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(255, 220, 200, 0.22);
+  border-radius: 4px;
+}
+.seal-char {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: rgba(237, 230, 207, 0.95);
+  position: relative;
+  z-index: 1;
+}
+
 .logo-name {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 20px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.85);
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--ink);
   letter-spacing: 0.01em;
 }
-.skill-pill {
-  margin-left: auto;
-  border: 1px solid rgba(0,255,163,0.28);
-  background: rgba(0,255,163,0.06);
-  padding: 5px 16px;
-  border-radius: 20px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: #00ffa3;
-  letter-spacing: 0.08em;
-}
 
-/* MAIN CONTENT */
-.main {
-  display: grid;
-  grid-template-columns: 1fr 440px;
-  gap: 48px;
-  align-items: center;
-}
-
-/* LEFT: tagline + description */
-.left {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.tagline {
-  font-size: 56px;
-  font-weight: 900;
-  line-height: 1.18;
-  letter-spacing: -0.03em;
-  color: #f0f0f2;
-}
-.tagline .hl {
-  color: #00ffa3;
-  position: relative;
-  display: inline-block;
-}
-.desc {
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.46);
-  font-weight: 400;
-  max-width: 440px;
-}
-
-/* RIGHT: transform card */
-.card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 16px;
-  padding: 28px 28px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  font-family: 'JetBrains Mono', monospace;
-}
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.dot { width: 10px; height: 10px; border-radius: 50%; }
-.d-red { background: #ff5f57; }
-.d-yellow { background: #febc2e; }
-.d-green { background: #28c840; }
-.card-title {
-  font-size: 11px;
-  color: rgba(255,255,255,0.25);
-  letter-spacing: 0.05em;
-  margin-left: 4px;
-}
-
-.block-label {
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  margin-bottom: 8px;
-}
-.block-label.before { color: rgba(255,107,53,0.7); }
-.block-label.after { color: #00ffa3; }
-
-.block-text {
-  font-size: 13.5px;
-  line-height: 1.65;
-  padding: 12px 14px;
-  border-radius: 8px;
-  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
-  font-weight: 400;
-  margin-bottom: 16px;
-}
-.block-text.before {
-  background: rgba(255,107,53,0.06);
-  color: rgba(255,255,255,0.38);
-  text-decoration: none;
-}
-.arrow-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: -4px 0 12px;
-  padding: 0 4px;
-}
-.arrow-line {
+.tagline-block {
   flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(0,255,163,0.15), rgba(0,255,163,0.5), rgba(0,255,163,0.15));
-}
-.arrow-icon {
-  color: #00ffa3;
-  font-size: 18px;
-}
-.register-badge {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  color: #00ffa3;
-  letter-spacing: 0.1em;
-}
-.block-text.after {
-  background: rgba(0,255,163,0.06);
-  color: rgba(255,255,255,0.88);
-  border: 1px solid rgba(0,255,163,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 0;
 }
 
-/* BOTTOM: register tags */
-.bottombar {
+.tagline {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.tagline .red { color: var(--seal); }
+
+.desc {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink-60);
+  font-weight: 400;
+}
+
+.bottom-block {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 8px;
 }
-.reg-tag {
-  font-family: 'JetBrains Mono', monospace;
+
+.install {
+  background: var(--ink-08);
+  border: 1px solid var(--ink-18);
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-family: 'Courier New', monospace;
   font-size: 11.5px;
-  padding: 5px 14px;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.45);
+  color: var(--ink-60);
+}
+.install .prompt { color: var(--seal); margin-right: 6px; }
+
+.badges {
+  display: flex;
+  gap: 6px;
+}
+.badge {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 10px;
+  padding: 3px 9px;
+  border: 1px solid var(--ink-18);
+  border-radius: 3px;
+  color: var(--ink-35);
   letter-spacing: 0.04em;
-  border: 1px solid rgba(255,255,255,0.07);
 }
-.reg-tag.active {
-  background: rgba(0,255,163,0.12);
-  color: #00ffa3;
-  border-color: rgba(0,255,163,0.25);
-  font-weight: 700;
+.badge.seal-badge {
+  border-color: rgba(184, 50, 25, 0.3);
+  color: var(--seal);
+  background: var(--seal-faint);
 }
-.mit {
-  margin-left: auto;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: rgba(255,255,255,0.2);
-  letter-spacing: 0.06em;
+
+/* ── 판심(版心): 가운데 세로 띠 ──────── */
+.panshim {
+  background: var(--ink-08);
+  border-left: 1px solid var(--ink-18);
+  border-right: 1px solid var(--ink-18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.panshim-dot {
+  width: 4px; height: 4px;
+  background: var(--ink-35);
+  border-radius: 50%;
+}
+.panshim-text {
+  writing-mode: vertical-rl;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 9px;
+  color: var(--ink-35);
+  letter-spacing: 0.25em;
+}
+
+/* ── RIGHT: 말투 세로 열 ──────────────── */
+.columns {
+  /* 전통 방향: 오른쪽에서 왼쪽으로 읽음 */
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 4px;
+  position: relative;
+}
+/* 계선(界線): 열 사이 가는 선 */
+.col + .col {
+  border-left: 1px solid var(--ink-18);
+}
+
+.col-name {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--ink-35);
+  margin-bottom: 14px;
+  text-align: center;
+}
+.col.active .col-name {
+  color: var(--seal);
+}
+
+.col-tilde {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 24px;
+  color: var(--ink-35);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.col.active .col-tilde {
+  color: rgba(184, 50, 25, 0.55);
+}
+
+.col-char {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 800;
+  font-size: 108px;
+  line-height: 1;
+  color: var(--ink-18);
+  text-align: center;
+}
+.col.active .col-char {
+  color: var(--ink);
+}
+
+/* 계선 아래쪽 장식: 전통 행 번호 자리 */
+.col-num {
+  position: absolute;
+  bottom: 16px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 9px;
+  color: var(--ink-18);
+  letter-spacing: 0.05em;
 }
 </style>
 </head>
 <body>
-<div class="bg"></div>
-<div class="glow-left"></div>
-<div class="glow-right"></div>
-<div class="wrap">
 
-  <div class="topbar">
-    <div class="logo-sq">k</div>
-    <span class="logo-name">k-maltu</span>
-    <span class="skill-pill">Claude Code Skill</span>
-  </div>
+<!-- 광곽 프레임 -->
+<div class="gwangwak"></div>
 
-  <div class="main">
-    <div class="left">
+<div class="page">
+
+  <!-- 왼쪽: 정보 -->
+  <div class="info">
+    <div class="logo-row">
+      <div class="seal-icon">
+        <span class="seal-char">말</span>
+      </div>
+      <span class="logo-name">k-maltu</span>
+    </div>
+
+    <div class="tagline-block">
       <div class="tagline">
         AI가 쓴 한국어,<br>
-        <span class="hl">사람 말투로.</span>
+        <span class="red">사람 말투로.</span>
       </div>
       <div class="desc">
         blog, threads, dc, gongmun 네 가지 말투로 바꾸고<br>
@@ -261,40 +286,51 @@ body {
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <div class="dot d-red"></div>
-        <div class="dot d-yellow"></div>
-        <div class="dot d-green"></div>
-        <span class="card-title">k-maltu transform</span>
+    <div class="bottom-block">
+      <div class="install">
+        <span class="prompt">$</span>git clone https://github.com/chrisjo-dev/k-maltu
       </div>
-
-      <span class="block-label before">BEFORE</span>
-      <div class="block-text before">
-        이러한 문제는 생각보다 많은 분들이<br>
-        겪고 계신 매우 흔한 문제입니다.
-      </div>
-
-      <div class="arrow-row">
-        <div class="arrow-line"></div>
-        <span class="arrow-icon">↓</span>
-        <span class="register-badge">BLOG</span>
-        <div class="arrow-line"></div>
-      </div>
-
-      <span class="block-label after">AFTER</span>
-      <div class="block-text after">
-        찾아보니 나만 겪는 일은 아니었다.
+      <div class="badges">
+        <span class="badge seal-badge">Claude Code Skill</span>
+        <span class="badge">MIT License</span>
+        <span class="badge">Python 3.10+</span>
       </div>
     </div>
   </div>
 
-  <div class="bottombar">
-    <span class="reg-tag active">blog</span>
-    <span class="reg-tag">threads</span>
-    <span class="reg-tag">dc</span>
-    <span class="reg-tag">gongmun</span>
-    <span class="mit">MIT License</span>
+  <!-- 판심 -->
+  <div class="panshim">
+    <div class="panshim-dot"></div>
+    <span class="panshim-text">말투</span>
+    <div class="panshim-dot"></div>
+  </div>
+
+  <!-- 오른쪽: 말투 열 (오른쪽부터 blog, threads, dc, gongmun) -->
+  <div class="columns">
+    <div class="col active">
+      <span class="col-name">blog</span>
+      <span class="col-tilde">～</span>
+      <span class="col-char">다</span>
+      <span class="col-num">一</span>
+    </div>
+    <div class="col">
+      <span class="col-name">threads</span>
+      <span class="col-tilde">～</span>
+      <span class="col-char">요</span>
+      <span class="col-num">二</span>
+    </div>
+    <div class="col">
+      <span class="col-name">dc</span>
+      <span class="col-tilde">～</span>
+      <span class="col-char">음</span>
+      <span class="col-num">三</span>
+    </div>
+    <div class="col">
+      <span class="col-name">gongmun</span>
+      <span class="col-tilde">～</span>
+      <span class="col-char">함</span>
+      <span class="col-num">四</span>
+    </div>
   </div>
 
 </div>

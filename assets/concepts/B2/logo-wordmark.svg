@@ -1,0 +1,26 @@
+<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 하지 배경 -->
+  <rect width="400" height="100" rx="14" fill="#ede6cf"/>
+  <!-- 광곽 테두리 -->
+  <rect x="2" y="2" width="396" height="96" rx="12" fill="none" stroke="rgba(28,22,16,0.25)" stroke-width="1.5"/>
+  <rect x="7" y="7" width="386" height="86" rx="9" fill="none" stroke="rgba(28,22,16,0.12)" stroke-width="1"/>
+  <!-- 인장 아이콘 -->
+  <rect x="18" y="18" width="64" height="64" rx="9" fill="#b83219"/>
+  <rect x="23" y="23" width="54" height="54" rx="6" fill="none" stroke="rgba(255,220,200,0.25)" stroke-width="1.5"/>
+  <text
+    x="50" y="70"
+    text-anchor="middle"
+    font-family="'Apple SD Gothic Neo', 'Noto Serif KR', serif"
+    font-weight="900"
+    font-size="40"
+    fill="rgba(237,230,207,0.96)"
+  >말</text>
+  <!-- 워드마크 -->
+  <text
+    x="102" y="65"
+    font-family="'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif"
+    font-weight="700"
+    font-size="34"
+    fill="#1c1610"
+  >k-maltu</text>
+</svg>

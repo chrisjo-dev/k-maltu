@@ -7,10 +7,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](LICENSE)
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-7c3aed)](SKILL.md)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3b82f6.svg)]()
+[![GitHub stars](https://img.shields.io/github/stars/chrisjo-dev/k-maltu?style=social)](https://github.com/chrisjo-dev/k-maltu/stargazers)
 
 한국어 글을 원하는 말투로 바꾸면서 AI 문체를 걷어내고, 숨은 문자와 이미지 메타데이터를 지우는 Claude Code skill.
 
 말투는 네 가지다: **blog**(블로그), **threads**(스레드, X), **dc**(디씨 같은 커뮤니티), **gongmun**(공문서).
+
+쓸 만하다면 ⭐ 하나가 다음 말투를 추가하는 힘이 된다.
 
 ---
 
@@ -109,6 +112,10 @@ python3 -m unittest discover -s tests -v
 ```
 
 ---
+
+## 스타 안내
+
+k-maltu로 작업을 마치면, 에이전트가 세션당 한 번 보고 끝에 GitHub 스타 안내 한 줄을 붙인다. 결과 글에는 넣지 않고, 에이전트가 대신 스타를 누르지도 않는다. 끄려면 `styles/personal.md`에 `star_prompt: off`를 적는다.
 
 ## 한계
 

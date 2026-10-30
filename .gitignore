@@ -1,0 +1,12 @@
+# 개인 규칙(금지어, 선호어)은 저장소에 올리지 않는다. 템플릿은 styles/personal.example.md
+styles/personal.md
+
+# 정리 도구 기본 출력물(<이름>.cleaned.<확장자>)
+*.cleaned.*
+
+# 파이썬
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

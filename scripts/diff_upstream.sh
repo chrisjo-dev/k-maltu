@@ -16,7 +16,7 @@ for mod in styles/*/*.md; do
   fi
   orig=$(find vendor -type f -name "$name" | head -n 1)
   if [ -z "$orig" ]; then
-    echo "== $mod: vendor에 같은 이름의 원본이 없습니다(ko-maltu에서 새로 쓴 파일)"
+    echo "== $mod: vendor에 같은 이름의 원본이 없습니다(k-maltu에서 새로 쓴 파일)"
     continue
   fi
   echo "== $orig -> $mod"

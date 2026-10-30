@@ -1,6 +1,6 @@
 # 한국어 AI 글쓰기 "AI 티" 체크리스트
 
-> ko-maltu 판. 원본은 `vendor/korean-humanizer/references/ko-ai-signals.md`(korean-humanizer v1.0.1, MIT, dotoricode). 바꾼 점은 `CHANGES.md`.
+> k-maltu 판. 원본은 `vendor/korean-humanizer/references/ko-ai-signals.md`(korean-humanizer v1.0.1, MIT, dotoricode). 바꾼 점은 `CHANGES.md`.
 
 > Korean AI writing tells — 입력 텍스트에서 아래 패턴이 보이면 더 자연스러운 대안으로 바꾼다.
 

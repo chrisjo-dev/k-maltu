@@ -24,9 +24,9 @@
 - 외부 실행(subprocess, os.system, eval, exec, compile, `__import__`) 없음.
 - 모듈을 불러올 때 실행되는 코드는 상수 정의뿐이다.
 
-## ko-maltu에서 쓰는 방식
+## k-maltu에서 쓰는 방식
 
 - `clean_text(text, nfkc=False, aggressive_homoglyphs=False, normalize_spaces=False, strip_emoji_glue=False, strip_bidi=False)`
-  원본 함수의 기본값은 `normalize_spaces=True`라서 공백 동형 문자(U+00A0, U+3000 등)를 U+0020으로 바꾼다. ko-maltu는 이 값을 끄고 보고만 한다.
+  원본 함수의 기본값은 `normalize_spaces=True`라서 공백 동형 문자(U+00A0, U+3000 등)를 U+0020으로 바꾼다. k-maltu는 이 값을 끄고 보고만 한다.
 - `inspect_text(text)`: 점검 보고에 쓴다. 이 함수는 공백 동형 문자와 방향 제어 문자를 항상 보고하므로, 보고에 나와도 정리 때 지워지지 않는 문자가 있다(LRM, RLM, 격리 문자 등).
 - 원본은 마크다운 코드 블록을 구분하지 않는다. 코드 보호는 `scripts/mdsegments.py`가 맡는다.

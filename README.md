@@ -1,4 +1,4 @@
-# ko-maltu
+# k-maltu
 
 한국어 글을 원하는 말투로 바꾸면서 AI 문체를 걷어내고, 숨은 문자와 이미지 메타데이터를 지우는 Claude Code skill.
 
@@ -28,15 +28,15 @@ dc 말투 규칙에는 혐오, 비하, 지역 비하 어미, 욕설을 만드는
 ## 설치
 
 ```sh
-git clone https://github.com/chrisjo-dev/ko-maltu.git ~/.claude/skills/ko-maltu
+git clone https://github.com/chrisjo-dev/k-maltu.git ~/.claude/skills/k-maltu
 ```
 
-> **korean-humanizer를 이미 쓰고 있다면** 둘 중 하나만 켜 두는 것을 권한다. ko-maltu는 korean-humanizer의 규칙을 복사해 품고 있고, "AI 티 빼줘" 같은 트리거 문구도 겹친다. 둘 다 켜 두면 어느 skill이 실행될지 예측하기 어렵다. 예: `rm ~/.claude/skills/korean-humanizer` (링크로 설치한 경우)
+> **korean-humanizer를 이미 쓰고 있다면** 둘 중 하나만 켜 두는 것을 권한다. k-maltu는 korean-humanizer의 규칙을 복사해 품고 있고, "AI 티 빼줘" 같은 트리거 문구도 겹친다. 둘 다 켜 두면 어느 skill이 실행될지 예측하기 어렵다. 예: `rm ~/.claude/skills/korean-humanizer` (링크로 설치한 경우)
 
 또는 이미 받은 폴더를 링크로 건다.
 
 ```sh
-ln -s /path/to/ko-maltu ~/.claude/skills/ko-maltu
+ln -s /path/to/k-maltu ~/.claude/skills/k-maltu
 ```
 
 스크립트는 파이썬 3.10 이상, 표준 라이브러리만 쓴다. 따로 설치할 패키지는 없다.
@@ -109,7 +109,7 @@ tests/                unittest
 
 ## 출처와 라이선스
 
-ko-maltu는 MIT 라이선스다([LICENSE](LICENSE)). 다음 두 MIT 프로젝트를 포함한다. 고지 전문은 [NOTICE](NOTICE).
+k-maltu는 MIT 라이선스다([LICENSE](LICENSE)). 다음 두 MIT 프로젝트를 포함한다. 고지 전문은 [NOTICE](NOTICE).
 
 - [korean-humanizer](https://github.com/dotoricode/korean-humanizer) v1.0.1, Copyright (c) 2026 dotoricode. AI 문체 카탈로그와 과교정 방지 원칙. `vendor/korean-humanizer/`에 원본, `styles/base/`에 고친 판.
 - [watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover) (commit 5c18093), Copyright (c) 2026 Guillaume Meyer and contributors. 숨은 문자 판정 `text_unicode.py` 한 파일만 원본 그대로 가져왔다. 서버, Docker, 통계적 워터마크 대응 재작성은 포함하지 않는다.
@@ -118,4 +118,4 @@ ko-maltu는 MIT 라이선스다([LICENSE](LICENSE)). 다음 두 MIT 프로젝트
 
 ## English summary
 
-ko-maltu is a Claude Code skill for Korean text. It (1) removes "AI-sounding" Korean phrasing using the korean-humanizer catalog, (2) rewrites text into one of four registers (blog, threads, dc community style, gongmun official documents), each with its own rules and per-category humanizer switches, and (3) strips invisible Unicode characters and PNG/JPEG metadata (EXIF, XMP, IPTC, C2PA) with standard-library Python scripts, preserving Markdown code, emoji sequences, flag tags, and Hangul fillers after jamo. A verify step checks that numbers, URLs, links, image paths, and code blocks are unchanged. Original files are never overwritten. It does not remove statistical (token-sampling) or pixel watermarks and does not promise to evade AI detectors. Use it only on content you own. MIT licensed; includes MIT-licensed code from korean-humanizer and watermarks-remover (see NOTICE).
+k-maltu is a Claude Code skill for Korean text. It (1) removes "AI-sounding" Korean phrasing using the korean-humanizer catalog, (2) rewrites text into one of four registers (blog, threads, dc community style, gongmun official documents), each with its own rules and per-category humanizer switches, and (3) strips invisible Unicode characters and PNG/JPEG metadata (EXIF, XMP, IPTC, C2PA) with standard-library Python scripts, preserving Markdown code, emoji sequences, flag tags, and Hangul fillers after jamo. A verify step checks that numbers, URLs, links, image paths, and code blocks are unchanged. Original files are never overwritten. It does not remove statistical (token-sampling) or pixel watermarks and does not promise to evade AI detectors. Use it only on content you own. MIT licensed; includes MIT-licensed code from korean-humanizer and watermarks-remover (see NOTICE).

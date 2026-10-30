@@ -27,7 +27,7 @@
 - `assets/` (소개 카드 이미지)
 - `scripts/` 중 eval 외 스크립트: `check-codex-skill.sh`, `install-codex-skill.sh`, `lint-cross-file.sh`, `lint-examples.sh`, `lint-patterns.sh`
 
-뺀 파일은 ko-maltu 동작에 쓰이지 않는다. 필요하면 원작 저장소에서 본다.
+뺀 파일은 k-maltu 동작에 쓰이지 않는다. 필요하면 원작 저장소에서 본다.
 
 ## 참고
 

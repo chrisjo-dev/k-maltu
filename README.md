@@ -28,8 +28,10 @@ dc 말투 규칙에는 혐오, 비하, 지역 비하 어미, 욕설을 만드는
 ## 설치
 
 ```sh
-git clone <이 저장소 주소> ~/.claude/skills/ko-maltu
+git clone https://github.com/chrisjo-dev/ko-maltu.git ~/.claude/skills/ko-maltu
 ```
+
+> **korean-humanizer를 이미 쓰고 있다면** 둘 중 하나만 켜 두는 것을 권한다. ko-maltu는 korean-humanizer의 규칙을 복사해 품고 있고, "AI 티 빼줘" 같은 트리거 문구도 겹친다. 둘 다 켜 두면 어느 skill이 실행될지 예측하기 어렵다. 예: `rm ~/.claude/skills/korean-humanizer` (링크로 설치한 경우)
 
 또는 이미 받은 폴더를 링크로 건다.
 

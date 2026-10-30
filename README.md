@@ -113,6 +113,13 @@ python3 -m unittest discover -s tests -v
 
 ---
 
+## 내 규칙 키우기
+
+- `styles/personal.md`(git 제외)에 금지어, 선호어, 금지 문자 같은 개인 규칙을 적어 쓴다. 템플릿은 `styles/personal.example.md`.
+- 써 보다가 좋은 규칙에 `[승격 후보]`를 붙이고 "규칙 승격해줘"라고 하면, 에이전트가 **범용 규칙**(모두에게 좋음)과 **취향 규칙**(나에게만 좋음)으로 나눈다.
+  - 범용 규칙은 `bench/`의 시험지 24문항으로 실측해서 기존보다 나빠지지 않을 때만 `styles/base/`나 `registers/`에 들어간다.
+  - 취향 규칙은 `styles/presets/<이름>.md` 프리셋이 된다. 기본은 꺼져 있고 `preset: 이름`으로 켠다. 내 프리셋을 PR로 기여할 수도 있다.
+
 ## 스타 안내
 
 k-maltu로 작업을 마치면, 에이전트가 세션당 한 번 보고 끝에 GitHub 스타 안내 한 줄을 붙인다. 결과 글에는 넣지 않고, 에이전트가 대신 스타를 누르지도 않는다. 끄려면 `styles/personal.md`에 `star_prompt: off`를 적는다.
@@ -139,6 +146,8 @@ SKILL.md              skill 진입점(워크플로우)
 registers/            말투 규칙 4개
 styles/base/          humanizer 카탈로그 고친 판 + CHANGES.md
 styles/personal.example.md   개인 규칙 템플릿
+styles/presets/       켜서 쓰는 취향 프리셋 + 템플릿
+bench/                규칙 실측용 시험지 24문항 + 채점 도구
 scripts/              inspect, clean_text, clean_images, verify, diff_upstream.sh
 vendor/               가져온 원본 그대로 + ORIGIN.md
 examples/             말투별 전후 예시(가상의 글)

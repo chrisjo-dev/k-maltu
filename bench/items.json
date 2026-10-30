@@ -1,0 +1,1431 @@
+{
+  "version": "draft-2",
+  "created": "2026-10-30",
+  "count": 24,
+  "length_unit": "공백 포함, 줄바꿈 제외 글자 수",
+  "preserve_note": "exact=true는 원문 문자열이 결과에 그대로 있어야 함. exact=false는 값은 같고 표기 변경 허용(주로 공문 날짜/시각).",
+  "items": [
+    {
+      "id": "blog-01",
+      "register": "blog",
+      "type": "정리형",
+      "path": "items/blog-01.md",
+      "length": 770,
+      "planted_patterns": [
+        "5_openers_closers",
+        "1_intensifiers",
+        "2_empty_adjectives",
+        "3_translationese",
+        "4_geotida_ireohan_haedang",
+        "6_passive",
+        "7_connectives",
+        "8_parallelism",
+        "9_honorific",
+        "11_hedging",
+        "12_llm_vocab"
+      ],
+      "preserve": [
+        {
+          "value": "2년",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "솔바람캠핑장",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "2시간 10분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "45,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "https://example.com/solbaram/booking",
+          "kind": "url",
+          "exact": true
+        },
+        {
+          "value": "5,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "영하 7도",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "새벽 3시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "여기 밤에는 생각보다 훨씬 추워요, 물은 꼭 실내에 두세요",
+          "kind": "quote",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "blog-02",
+      "register": "blog",
+      "type": "정리형",
+      "path": "items/blog-02.md",
+      "length": 731,
+      "planted_patterns": [
+        "5_openers_closers",
+        "3_translationese",
+        "4_geotida_ireohan_haedang",
+        "6_passive",
+        "7_connectives",
+        "8_parallelism",
+        "1_intensifiers",
+        "11_hedging",
+        "12_llm_vocab",
+        "10_emoji"
+      ],
+      "preserve": [
+        {
+          "value": "3월",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "두 달",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "하늘NAS H2",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "4TB",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "새벽 2시 30분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "30 2 * * * rsync -av --delete /photos/ /backup/photos/",
+          "kind": "code",
+          "exact": true
+        },
+        {
+          "value": "--delete",
+          "kind": "code",
+          "exact": true
+        },
+        {
+          "value": "주 1회",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "3시간 40분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "6분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "2,800원",
+          "kind": "money",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "blog-03",
+      "register": "blog",
+      "type": "변환형",
+      "path": "items/blog-03.md",
+      "length": 679,
+      "planted_patterns": [
+        "2_empty_adjectives",
+        "1_intensifiers",
+        "8_parallelism",
+        "4_geotida_ireohan_haedang",
+        "6_passive",
+        "12_llm_vocab",
+        "7_connectives",
+        "3_translationese"
+      ],
+      "preserve": [
+        {
+          "value": "가계부온",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "온솔랩",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "2.0",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "2026년 10월 27일",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "94.2%",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "70%",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "80%",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "한서윤",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "가계부는 꾸준히 쓰는 게 제일 어렵다. 그 귀찮음을 줄이는 데 집중했다",
+          "kind": "quote",
+          "exact": true
+        },
+        {
+          "value": "안드로이드 8.0",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "iOS 16",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "3,900원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "https://example.com/gagyebuon/2.0",
+          "kind": "url",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "blog-04",
+      "register": "blog",
+      "type": "변환형",
+      "path": "items/blog-04.md",
+      "length": 671,
+      "planted_patterns": [
+        "3_translationese",
+        "8_parallelism",
+        "1_intensifiers",
+        "6_passive",
+        "5_openers_closers",
+        "4_geotida_ireohan_haedang"
+      ],
+      "preserve": [
+        {
+          "value": "가람도",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "오전 7시 20분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "해솔항",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "12,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "11.5km",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "4시간",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "등대 전망대",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "바다곳간",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "성게비빔밥",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "18,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "우리 섬 성게는 6월이 제일 달아요",
+          "kind": "quote",
+          "exact": true
+        },
+        {
+          "value": "한 곳",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "저녁 9시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "https://example.com/garamdo/stay",
+          "kind": "url",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "blog-05",
+      "register": "blog",
+      "type": "변환형",
+      "path": "items/blog-05.md",
+      "length": 671,
+      "planted_patterns": [
+        "3_translationese",
+        "6_passive",
+        "4_geotida_ireohan_haedang",
+        "11_hedging",
+        "12_llm_vocab",
+        "2_empty_adjectives",
+        "7_connectives"
+      ],
+      "preserve": [
+        {
+          "value": "3주",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "200g",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "3분간",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "300g",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "5분간",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "500ml",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "15분간",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "고춧가루 1큰술",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "다진 마늘 1큰술",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "두부 반 모",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "마지막 3분 전",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "반 작은술",
+          "kind": "number",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "blog-06",
+      "register": "blog",
+      "type": "통제형",
+      "path": "items/blog-06.md",
+      "length": 499,
+      "planted_patterns": [],
+      "preserve": [
+        {
+          "value": "7시 40분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "3년",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "12,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "바퀴살자전거",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "손에 묻은 건 주방세제로 지우면 돼요",
+          "kind": "quote",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "threads-01",
+      "register": "threads",
+      "type": "정리형",
+      "path": "items/threads-01.md",
+      "length": 453,
+      "planted_patterns": [
+        "5_openers_closers",
+        "10_emoji",
+        "8_parallelism",
+        "4_geotida_ireohan_haedang",
+        "1_intensifiers",
+        "7_connectives",
+        "3_translationese",
+        "12_llm_vocab",
+        "2_empty_adjectives",
+        "11_hedging"
+      ],
+      "preserve": [
+        {
+          "value": "100일",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "6시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "물 한 컵",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "10분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "세 줄",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "83일",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "하루콩",
+          "kind": "name",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "threads-02",
+      "register": "threads",
+      "type": "정리형",
+      "path": "items/threads-02.md",
+      "length": 405,
+      "planted_patterns": [
+        "4_geotida_ireohan_haedang",
+        "11_hedging",
+        "2_empty_adjectives",
+        "8_parallelism",
+        "3_translationese",
+        "1_intensifiers",
+        "12_llm_vocab",
+        "6_passive"
+      ],
+      "preserve": [
+        {
+          "value": "6개월",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "모아메모",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "37명",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "29명",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "2,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "https://example.com/moamemo",
+          "kind": "url",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "threads-03",
+      "register": "threads",
+      "type": "변환형",
+      "path": "items/threads-03.md",
+      "length": 459,
+      "planted_patterns": [
+        "12_llm_vocab",
+        "6_passive",
+        "7_connectives",
+        "8_parallelism",
+        "2_empty_adjectives",
+        "3_translationese"
+      ],
+      "preserve": [
+        {
+          "value": "해오름동 주민자치회",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "11월 14일(토)",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "오전 10시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "오후 4시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "해오름근린공원 잔디광장",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "제3회 해오름 나눔장터",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "60개",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "10,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "10%",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "11월 6일",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "https://example.com/haeoreum/market",
+          "kind": "url",
+          "exact": true
+        },
+        {
+          "value": "박도윤",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "작년에는 비가 와서 절반만 열렸다. 올해는 제대로 해 보고 싶다",
+          "kind": "quote",
+          "exact": true
+        },
+        {
+          "value": "해오름동 주민센터 3층 강당",
+          "kind": "name",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "threads-04",
+      "register": "threads",
+      "type": "변환형",
+      "path": "items/threads-04.md",
+      "length": 474,
+      "planted_patterns": [
+        "12_llm_vocab",
+        "6_passive",
+        "11_hedging",
+        "7_connectives",
+        "1_intensifiers",
+        "4_geotida_ireohan_haedang",
+        "3_translationese"
+      ],
+      "preserve": [
+        {
+          "value": "20%",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "80%",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "100%",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "35도",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "누리텍",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "배터리 보호 모드",
+          "kind": "name",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "threads-05",
+      "register": "threads",
+      "type": "변환형",
+      "path": "items/threads-05.md",
+      "length": 405,
+      "planted_patterns": [
+        "3_translationese",
+        "8_parallelism",
+        "1_intensifiers",
+        "10_emoji",
+        "5_openers_closers"
+      ],
+      "preserve": [
+        {
+          "value": "1년",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "금요일 오후 4시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "14개",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "19개",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "9개",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "5개",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "쉬는 것도 일정이다",
+          "kind": "quote",
+          "exact": true
+        },
+        {
+          "value": "30분",
+          "kind": "time",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "threads-06",
+      "register": "threads",
+      "type": "통제형",
+      "path": "items/threads-06.md",
+      "length": 189,
+      "planted_patterns": [],
+      "preserve": [
+        {
+          "value": "3만 원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "40분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "2주",
+          "kind": "number",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "dc-01",
+      "register": "dc",
+      "type": "정리형",
+      "path": "items/dc-01.md",
+      "length": 322,
+      "planted_patterns": [
+        "5_openers_closers",
+        "1_intensifiers",
+        "12_llm_vocab",
+        "7_connectives",
+        "11_hedging",
+        "8_parallelism",
+        "9_honorific"
+      ],
+      "preserve": [
+        {
+          "value": "타닥랩",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "TK-87",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "89,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "적축",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "2.4GHz",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "3,000mAh",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "4일",
+          "kind": "number",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "dc-02",
+      "register": "dc",
+      "type": "정리형",
+      "path": "items/dc-02.md",
+      "length": 320,
+      "planted_patterns": [
+        "5_openers_closers",
+        "4_geotida_ireohan_haedang",
+        "8_parallelism",
+        "12_llm_vocab",
+        "11_hedging",
+        "10_emoji",
+        "7_connectives",
+        "2_empty_adjectives"
+      ],
+      "preserve": [
+        {
+          "value": "6개월",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "저녁 7시에서 9시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "오후 2시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "첫 달",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "60kg",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "2주",
+          "kind": "number",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "dc-03",
+      "register": "dc",
+      "type": "변환형",
+      "path": "items/dc-03.md",
+      "length": 376,
+      "planted_patterns": [
+        "5_openers_closers",
+        "1_intensifiers",
+        "2_empty_adjectives",
+        "11_hedging",
+        "6_passive",
+        "7_connectives"
+      ],
+      "preserve": [
+        {
+          "value": "소리결",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "결버즈 프로",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "2주",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "8시간",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "6시간 30분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "159,000원",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "129,000원",
+          "kind": "money",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "dc-04",
+      "register": "dc",
+      "type": "변환형",
+      "path": "items/dc-04.md",
+      "length": 413,
+      "planted_patterns": [
+        "5_openers_closers",
+        "3_translationese",
+        "6_passive",
+        "8_parallelism",
+        "1_intensifiers"
+      ],
+      "preserve": [
+        {
+          "value": "별빛 항로",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "2026년 11월 4일(수)",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "오전 6시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "오전 10시",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "은하 정거장",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "별조각 300개",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "https://example.com/starroute/notice/1104",
+          "kind": "url",
+          "exact": true
+        },
+        {
+          "value": "점검 시간 연장 가능",
+          "kind": "fact",
+          "exact": false,
+          "note": "표현은 바뀌어도 '연장될 수 있다'는 의미가 남아야 함"
+        }
+      ]
+    },
+    {
+      "id": "dc-05",
+      "register": "dc",
+      "type": "변환형",
+      "path": "items/dc-05.md",
+      "length": 348,
+      "planted_patterns": [
+        "3_translationese",
+        "8_parallelism",
+        "6_passive",
+        "11_hedging",
+        "1_intensifiers",
+        "10_emoji",
+        "5_openers_closers"
+      ],
+      "preserve": [
+        {
+          "value": "550ml",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "50ml",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "2분",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "30초",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "자취왕 밥상",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "라면은 과학이 아니라 타이밍이다",
+          "kind": "quote",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "dc-06",
+      "register": "dc",
+      "type": "통제형",
+      "path": "items/dc-06.md",
+      "length": 124,
+      "planted_patterns": [],
+      "preserve": [
+        {
+          "value": "3일",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "5일째",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "반송",
+          "kind": "name",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "gongmun-01",
+      "register": "gongmun",
+      "type": "정리형",
+      "path": "items/gongmun-01.md",
+      "length": 495,
+      "planted_patterns": [
+        "3_translationese",
+        "1_intensifiers",
+        "2_empty_adjectives",
+        "12_llm_vocab",
+        "6_passive",
+        "11_hedging",
+        "9_honorific",
+        "5_openers_closers",
+        "10_emoji"
+      ],
+      "preserve": [
+        {
+          "value": "경영지원팀-2041(2026. 10. 15.)",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "2026. 11. 12.(목) 14:00~16:00",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "본관 5층 대회의실",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "약 120명",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "2026. 11. 5.",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "교육 일정표 1부",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "사유서 양식 1부",
+          "kind": "name",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "gongmun-02",
+      "register": "gongmun",
+      "type": "정리형",
+      "path": "items/gongmun-02.md",
+      "length": 412,
+      "planted_patterns": [
+        "4_geotida_ireohan_haedang",
+        "1_intensifiers",
+        "12_llm_vocab",
+        "10_emoji",
+        "6_passive",
+        "5_openers_closers",
+        "9_honorific",
+        "11_hedging"
+      ],
+      "preserve": [
+        {
+          "value": "2026년 11월 21일 토요일 오전 9시",
+          "kind": "date",
+          "exact": false,
+          "note": "2026. 11. 21.(토) 09:00 으로 표기만 바뀌어야 함"
+        },
+        {
+          "value": "새봄동 행정복지센터 앞마당",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "500kg",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "약 250가구",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "3,600,000원",
+          "kind": "money",
+          "exact": true,
+          "note": "금 3,600,000원(금삼백육십만원) 형식 기대. 숫자 3,600,000은 그대로"
+        },
+        {
+          "value": "단체별 5명 이상",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "2026.11.13",
+          "kind": "date",
+          "exact": false,
+          "note": "2026. 11. 13. 으로 표기만 바뀌어야 함"
+        },
+        {
+          "value": "총무팀",
+          "kind": "name",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "gongmun-03",
+      "register": "gongmun",
+      "type": "변환형",
+      "path": "items/gongmun-03.md",
+      "length": 379,
+      "planted_patterns": [
+        "10_emoji",
+        "5_openers_closers",
+        "9_honorific",
+        "1_intensifiers"
+      ],
+      "preserve": [
+        {
+          "value": "윤가람",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "하늘빌딩 8층",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "서울시 가상구 구름로 45",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "12월 3일(목) 오후 5시",
+          "kind": "date",
+          "exact": false,
+          "note": "연도 미기재. 2026. 12. 3.(목) 17:00 또는 연도 자리표시"
+        },
+        {
+          "value": "1인당 3개",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "12월 5일(토)",
+          "kind": "date",
+          "exact": false,
+          "note": "표기 변경 허용"
+        },
+        {
+          "value": "12월 7일(월) 오전 9시",
+          "kind": "date",
+          "exact": false,
+          "note": "09:00 표기 허용"
+        },
+        {
+          "value": "12월 4일(금)",
+          "kind": "date",
+          "exact": false,
+          "note": "표기 변경 허용"
+        },
+        {
+          "value": "자리 배치도",
+          "kind": "name",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "gongmun-04",
+      "register": "gongmun",
+      "type": "변환형",
+      "path": "items/gongmun-04.md",
+      "length": 474,
+      "planted_patterns": [
+        "5_openers_closers",
+        "1_intensifiers",
+        "9_honorific",
+        "10_emoji",
+        "11_hedging"
+      ],
+      "preserve": [
+        {
+          "value": "달빛구립도서관",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "퇴근길 한 권",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "2026년 11월 10일부터 12월 15일까지",
+          "kind": "date",
+          "exact": false,
+          "note": "2026. 11. 10.~2026. 12. 15. 표기 허용"
+        },
+        {
+          "value": "매주 화요일 저녁 7시 30분",
+          "kind": "time",
+          "exact": false,
+          "note": "19:30 표기 허용"
+        },
+        {
+          "value": "2층 세미나실",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "6회",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "15명",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "무료",
+          "kind": "money",
+          "exact": true
+        },
+        {
+          "value": "세 권",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "10월 26일부터 11월 3일까지",
+          "kind": "date",
+          "exact": false,
+          "note": "연도 미기재. 표기 변경 허용"
+        },
+        {
+          "value": "https://example.com/dalbit-library/apply",
+          "kind": "url",
+          "exact": true
+        },
+        {
+          "value": "02-000-0000",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "끝까지 못 읽어도 괜찮으니 일단 오시라",
+          "kind": "quote",
+          "exact": true,
+          "note": "공문에서는 인용 생략 허용(검수 결정 4). 남긴다면 그대로",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "gongmun-05",
+      "register": "gongmun",
+      "type": "변환형",
+      "path": "items/gongmun-05.md",
+      "length": 486,
+      "planted_patterns": [
+        "12_llm_vocab",
+        "6_passive",
+        "2_empty_adjectives",
+        "3_translationese"
+      ],
+      "preserve": [
+        {
+          "value": "누리솔루션",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "온기 한 상자",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "12월 1일부터 12월 18일까지",
+          "kind": "date",
+          "exact": false,
+          "note": "연도 미기재. 표기 변경 허용"
+        },
+        {
+          "value": "30,000원",
+          "kind": "money",
+          "exact": true,
+          "note": "금 30,000원(금삼만원) 형식 기대"
+        },
+        {
+          "value": "200상자",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "6,000,000원",
+          "kind": "money",
+          "exact": true,
+          "note": "금 6,000,000원(금육백만원) 형식 기대"
+        },
+        {
+          "value": "12월 19일",
+          "kind": "date",
+          "exact": false,
+          "note": "표기 변경 허용"
+        },
+        {
+          "value": "푸른숲종합사회복지관",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "11월 27일",
+          "kind": "date",
+          "exact": false,
+          "note": "표기 변경 허용"
+        },
+        {
+          "value": "최소 1팀 이상",
+          "kind": "number",
+          "exact": true
+        },
+        {
+          "value": "4시간",
+          "kind": "time",
+          "exact": true
+        },
+        {
+          "value": "강민재",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "작은 상자지만 받는 분께는 한 달을 버틸 힘이 될 수 있다",
+          "kind": "quote",
+          "exact": true,
+          "note": "공문에서는 인용 생략 허용(검수 결정 4). 남긴다면 그대로",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "gongmun-06",
+      "register": "gongmun",
+      "type": "통제형",
+      "path": "items/gongmun-06.md",
+      "length": 240,
+      "planted_patterns": [],
+      "preserve": [
+        {
+          "value": "2026. 11. 14.(토) 09:00~13:00",
+          "kind": "date",
+          "exact": true
+        },
+        {
+          "value": "1호기, 2호기",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "하늘빌딩",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "시설관리팀",
+          "kind": "name",
+          "exact": true
+        },
+        {
+          "value": "내선 2104",
+          "kind": "number",
+          "exact": true
+        }
+      ]
+    }
+  ],
+  "type_note": "통제형은 사람이 쓴 자연스러운 글. 과교정(불필요한 변경)을 잰다"
+}

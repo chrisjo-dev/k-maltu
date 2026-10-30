@@ -1,8 +1,49 @@
+![k-maltu banner](assets/banner.png)
+
 # k-maltu
+
+> AI가 쓴 한국어, 사람 말투로.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](LICENSE)
+[![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-7c3aed)](SKILL.md)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3b82f6.svg)]()
 
 한국어 글을 원하는 말투로 바꾸면서 AI 문체를 걷어내고, 숨은 문자와 이미지 메타데이터를 지우는 Claude Code skill.
 
 말투는 네 가지다: **blog**(블로그), **threads**(스레드, X), **dc**(디씨 같은 커뮤니티), **gongmun**(공문서).
+
+---
+
+## 30초 설치
+
+```sh
+git clone https://github.com/chrisjo-dev/k-maltu.git ~/.claude/skills/k-maltu
+```
+
+이미 받은 폴더가 있으면 링크로 건다.
+
+```sh
+ln -s /path/to/k-maltu ~/.claude/skills/k-maltu
+```
+
+스크립트는 파이썬 3.10 이상, 표준 라이브러리만 쓴다. 따로 설치할 패키지는 없다.
+
+---
+
+## 말투 4가지 전후 예시
+
+아래 예시는 모두 가상의 글이다. 실존 인물, 회사, 개인정보는 없다.
+
+| 말투 | 전 | 후 |
+|---|---|---|
+| blog | 이러한 문제는 생각보다 많은 분들이 겪고 계신 매우 흔한 문제입니다. | 찾아보니 나만 겪는 일은 아니었다. |
+| threads | 많은 분들이 출근 전 아침 시간을 효율적으로 활용하는 방법에 대해 궁금해하십니다. | 아침 30분 영어 기사 읽기, 3개월 했더니 읽기 속도 분당 120단어에서 180단어가 됐어요. |
+| dc | 안녕하세요. 최근 중고로 구매한 게이밍 모니터에서 화면 깜빡임 현상이 발생하여 다양한 해결 방법을 시도해 보았습니다. | 주사율 144Hz에서 120Hz로 내리니까 바로 멀쩡해짐 ㄹㅇ |
+| gongmun | 안녕하세요, 총무팀입니다! 11월 4일 수요일 오전 9시부터 12시까지는 3층 복합기를 사용하실 수 없습니다. | 3층 복합기 교체 작업으로 사용을 일시 중지하니 업무에 참고하기 바람. |
+
+전체 예시: [examples/](examples/)
+
+---
 
 ## 무엇을 하나
 
@@ -25,27 +66,7 @@
 
 dc 말투 규칙에는 혐오, 비하, 지역 비하 어미, 욕설을 만드는 규칙이 없다. 원문에 그런 표현이 있으면 알리고 묻는다.
 
-## 설치
-
-```sh
-git clone https://github.com/chrisjo-dev/k-maltu.git ~/.claude/skills/k-maltu
-```
-
-> **korean-humanizer를 이미 쓰고 있다면** 둘 중 하나만 켜 두는 것을 권한다. k-maltu는 korean-humanizer의 규칙을 복사해 품고 있고, "AI 티 빼줘" 같은 트리거 문구도 겹친다. 둘 다 켜 두면 어느 skill이 실행될지 예측하기 어렵다. 예: `rm ~/.claude/skills/korean-humanizer` (링크로 설치한 경우)
-
-또는 이미 받은 폴더를 링크로 건다.
-
-```sh
-ln -s /path/to/k-maltu ~/.claude/skills/k-maltu
-```
-
-스크립트는 파이썬 3.10 이상, 표준 라이브러리만 쓴다. 따로 설치할 패키지는 없다.
-
-개인 규칙을 쓰려면 템플릿을 복사해서 채운다. `styles/personal.md`는 git에 올라가지 않는다.
-
-```sh
-cp styles/personal.example.md styles/personal.md
-```
+---
 
 ## 사용 예
 
@@ -75,11 +96,19 @@ python3 scripts/verify.py drafts/post.md drafts/post.cleaned.md --forbid U+00B7
 scripts/diff_upstream.sh
 ```
 
+개인 규칙을 쓰려면 템플릿을 복사해서 채운다. `styles/personal.md`는 git에 올라가지 않는다.
+
+```sh
+cp styles/personal.example.md styles/personal.md
+```
+
 테스트:
 
 ```sh
 python3 -m unittest discover -s tests -v
 ```
+
+---
 
 ## 한계
 
@@ -92,6 +121,10 @@ python3 -m unittest discover -s tests -v
 - JPEG EXIF를 지우면 회전 정보도 사라진다. 회전 값이 있으면 경고한다.
 - 공문서 규칙은 행정업무 규정 제7조와 같은 규정 시행규칙 제2조, 제4조(2016년판 위키문헌으로 확인, 현행 조문은 미확인)를 바탕으로 했다. 기관 지침이 있으면 그것이 우선이다.
 
+> korean-humanizer를 이미 쓰고 있다면 둘 중 하나만 켜 두는 것을 권한다. k-maltu는 korean-humanizer의 규칙을 복사해 품고 있고, "AI 티 빼줘" 같은 트리거 문구도 겹친다. 둘 다 켜 두면 어느 skill이 실행될지 예측하기 어렵다. 예: `rm ~/.claude/skills/korean-humanizer` (링크로 설치한 경우)
+
+---
+
 ## 저장소 구조
 
 ```
@@ -103,9 +136,12 @@ scripts/              inspect, clean_text, clean_images, verify, diff_upstream.s
 vendor/               가져온 원본 그대로 + ORIGIN.md
 examples/             말투별 전후 예시(가상의 글)
 tests/                unittest
+assets/               로고, OG 이미지, 배너 (concepts/A/, concepts/B/ = 시안)
 ```
 
 원본(vendor)과 수정본(styles)을 나눠 둔 것은 다른 한국어 문체 스킬을 더 가져와 고쳐 쓰기 위해서다. 새로 가져올 때는 `vendor/<이름>/`에 원본과 `ORIGIN.md`를, 고친 판은 `styles/<묶음>/`에 `CHANGES.md`와 함께 둔다.
+
+---
 
 ## 출처와 라이선스
 

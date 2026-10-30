@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="40" fill="#0b0c10"/>
+  <!-- Terminal prompt mark -->
+  <text x="28" y="82" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="28" fill="#00ffa3" font-weight="700">&gt;_</text>
+  <!-- "말" character -->
+  <text x="26" y="158" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="84" fill="#ffffff" font-weight="900">말</text>
+</svg>

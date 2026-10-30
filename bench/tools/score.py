@@ -100,7 +100,7 @@ def score_dir(d: Path) -> list[dict]:
             "preserve_ok": ok == total,
             "missing": missing,
             "ratio": round(chars(out) / max(1, chars(orig)), 2),
-            "middot": out.count("·"),
+            "middot": out.count("\u00b7"),
             "hidden": hidden_count(out),
         }
         if item["type"] == "통제형":

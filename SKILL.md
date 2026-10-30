@@ -62,6 +62,7 @@ python3 scripts/inspect_report.py <글.md> [이미지 ...]
 1. `registers/<name>.md`를 읽는다. frontmatter의 `humanizer` 항목에서 `off`인 카테고리는 건너뛰고, `strong`은 더 적극적으로, `partial`은 적힌 예외를 지키며 적용한다.
 2. `styles/base/ko-ai-signals.md`의 카테고리를 그 설정대로 스캔한다.
 3. 말투 파일의 핵심 규칙, 금지 사항, 형식(`format`)을 적용한다.
+   - gongmun이면 `styles/gongmun/plain-terms.csv`(국립국어원 대체어 목록)에서 본문의 외래어를 찾아, 목록과 정확히 일치하는 말만 `대안어(안)`으로 바꾼다. `registers/gongmun.md`의 "공문 다듬기 다섯 가지"를 반드시 적용한다.
 4. 수정량 상한
    - **blog, gongmun (그리고 5번 "AI 티만 빼기")**: humanizer 과교정 방지를 지킨다. 한 문단에 3곳 미만, 전체 문장의 20% 이하, 분량은 원문의 90% 이상.
    - **threads, dc**: 말투 변환 자체가 목적이라 위 상한을 적용하지 않는다. 대신 **의미, 숫자, 고유명사, 링크 보존**만 강제한다. 줄이면서 뺀 정보는 변경 보고에 적는다.
@@ -109,6 +110,7 @@ FAIL이 나오면 4단계로 돌아가 고치고 5, 6단계를 다시 돈다. �
 ## 참고 파일
 
 - `registers/blog.md`, `threads.md`, `dc.md`, `gongmun.md`: 말투 규칙
+- `styles/gongmun/plain-terms.csv`: 공문 대체어 목록(원본 `vendor/korean-plain-terms/`, 공공누리 제1유형)
 - `styles/base/ko-ai-signals.md`: AI 문체 카탈로그(고친 판), 바꾼 점은 `styles/base/CHANGES.md`
 - `vendor/korean-humanizer/`: 원작 그대로(전후 예시, PROMPT, eval)
 - `vendor/watermarks-remover/text_unicode.py`: 숨은 문자 판정 원본

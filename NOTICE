@@ -63,3 +63,16 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## 쉽고 바른 공공언어 쓰기 평가용 용어 목록
+
+- 위치: `vendor/korean-plain-terms/`, 사본 `styles/gongmun/plain-terms.csv`
+- 출처: 문화체육관광부 국립국어원, 「쉽고 바른 공공언어 쓰기 평가용 용어 목록」(공공데이터포털, https://www.data.go.kr/data/15130006/fileData.do)
+- 이용 조건: 공공누리 제1유형(출처표시)
+
+## 행정 효율과 협업 촉진에 관한 규정, 같은 규정 시행규칙 (2016년판)
+
+- 위치: `vendor/gongmun-law/`
+- 출처: 위키문헌(https://ko.wikisource.org)에 실린 법령 원문. 법령은 저작권법 제7조에 따라 보호받지 않는 저작물이다.

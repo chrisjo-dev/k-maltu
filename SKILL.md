@@ -29,7 +29,7 @@ description: 한국어 글을 정해진 말투(blog 블로그, threads 스레드
 ### 1단계. 점검(읽기 전용)
 
 ```sh
-python3 scripts/inspect.py <글.md> [이미지 ...]
+python3 scripts/inspect_report.py <글.md> [이미지 ...]
 ```
 
 숨은 문자 종류와 줄 번호, 공백 동형 문자, 이미지 메타데이터, 본문 개인정보 후보(IPv4, 이메일, 휴대폰 번호, 주민등록번호 형식)를 보고한다. 아무것도 바꾸지 않는다. 결과를 사용자에게 짧게 요약한다.

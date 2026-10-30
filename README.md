@@ -57,7 +57,7 @@ Claude Code에서:
 
 ```sh
 # 점검(아무것도 바꾸지 않음)
-python3 scripts/inspect.py drafts/post.md drafts/images/*.png
+python3 scripts/inspect_report.py drafts/post.md drafts/images/*.png
 
 # 숨은 문자 정리 -> drafts/post.cleaned.md (원본 유지, 코드 블록은 건드리지 않음)
 python3 scripts/clean_text.py drafts/post.md

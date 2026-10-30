@@ -54,7 +54,7 @@ class ImageReportTest(unittest.TestCase):
             src = Path(d) / "a.md"
             src.write_bytes((FIXTURES / "hidden_sample.md").read_bytes())
             before = src.read_bytes()
-            r = subprocess.run([sys.executable, str(SCRIPTS / "inspect.py"), str(src)], capture_output=True, text=True)
+            r = subprocess.run([sys.executable, str(SCRIPTS / "inspect_report.py"), str(src)], capture_output=True, text=True)
             self.assertEqual(r.returncode, 0, r.stderr)
             self.assertIn("숨은 문자: 9개", r.stdout)
             self.assertEqual(src.read_bytes(), before)

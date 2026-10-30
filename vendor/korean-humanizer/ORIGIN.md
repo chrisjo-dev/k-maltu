@@ -5,7 +5,7 @@
 | 원작 | korean-humanizer (dotoricode) |
 | 저장소 | https://github.com/dotoricode/korean-humanizer |
 | 버전 | 1.0.1 (CHANGELOG 기준 2026-06-02) |
-| 복사한 위치 | 로컬 설치본 `~/claude-config/claude/skills/korean-humanizer/` (claude-config 커밋 dd8ac4a) |
+| 복사한 위치 | https://github.com/dotoricode/korean-humanizer 의 v1.0.1 설치본 |
 | 복사일 | 2026-10-30 |
 | 라이선스 | MIT, Copyright (c) 2026 dotoricode (같은 폴더 `LICENSE`) |
 

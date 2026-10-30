@@ -1,4 +1,4 @@
-"""테스트 공용 도우미. scripts/를 sys.path 맨 뒤에 붙인다(scripts/inspect.py가 표준 inspect를 가리지 않게)."""
+"""테스트 공용 도우미. scripts/를 sys.path에 붙인다."""
 
 import importlib.util
 import struct
@@ -14,8 +14,8 @@ if str(SCRIPTS) not in sys.path:
 
 
 def load_inspect():
-    """scripts/inspect.py를 표준 inspect와 다른 이름으로 불러온다."""
-    spec = importlib.util.spec_from_file_location("maltu_inspect", SCRIPTS / "inspect.py")
+    """scripts/inspect_report.py를 불러온다."""
+    spec = importlib.util.spec_from_file_location("maltu_inspect", SCRIPTS / "inspect_report.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod

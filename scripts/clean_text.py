@@ -14,12 +14,8 @@ ko-maltu는 그 위에 다음만 정한다.
 
 from __future__ import annotations
 
-# scripts/inspect.py가 표준 라이브러리 inspect를 가리지 않도록, 이 폴더를 sys.path 맨 뒤로 보낸다.
 import os
 import sys
-
-_HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path[:] = [p for p in sys.path if os.path.abspath(p or os.curdir) != _HERE] + [_HERE]
 
 import argparse
 from collections import Counter

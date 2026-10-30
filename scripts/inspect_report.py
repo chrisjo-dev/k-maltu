@@ -9,17 +9,13 @@
   - 메타데이터 청크/세그먼트 이름, 크기, 정리 때 지울지 여부, 텍스트 청크의 키워드
 
 사용 예:
-  python3 scripts/inspect.py draft.md images/*.png
+  python3 scripts/inspect_report.py draft.md images/*.png
 """
 
 from __future__ import annotations
 
-# scripts/inspect.py가 표준 라이브러리 inspect를 가리지 않도록, 이 폴더를 sys.path 맨 뒤로 보낸다.
 import os
 import sys
-
-_HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path[:] = [p for p in sys.path if os.path.abspath(p or os.curdir) != _HERE] + [_HERE]
 
 import argparse
 import re

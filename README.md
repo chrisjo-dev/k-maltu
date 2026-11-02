@@ -127,6 +127,7 @@ k-maltu로 작업을 마치면, 에이전트가 세션당 한 번 보고 끝에 
 
 - 지우는 것은 **숨은 문자와 메타데이터뿐**이다. 단어 선택 확률에 심는 통계적 워터마크와 이미지 픽셀 워터마크는 지우지 않는다.
 - **AI 탐지기 통과를 보장하지 않는다.** 목표는 자연스러운 글과 깨끗한 파일이다.
+- **메타데이터를 지워도 AI 생성물 표시 의무는 그대로다.** 플랫폼 정책이나 법이 표시를 요구하면 직접 표시한다.
 - **본인이 쓰거나 권리를 가진 콘텐츠에만** 쓴다. 남의 글에서 출처나 저작권 정보를 지우는 용도가 아니다.
 - 공백 동형 문자(U+00A0, U+3000 등)는 기본으로 보고만 한다. 일부러 넣은 줄바꿈 없는 공백일 수 있어서다.
 - 마크다운 펜스 코드 블록과 인라인 코드는 정리하지 않는다(보고만). 들여쓰기 코드 블록은 코드로 보지 않는다.
@@ -168,4 +169,4 @@ k-maltu는 MIT 라이선스다([LICENSE](LICENSE)). 다음 두 MIT 프로젝트�
 
 ## English summary
 
-k-maltu is a Claude Code skill for Korean text. It (1) removes "AI-sounding" Korean phrasing using the korean-humanizer catalog, (2) rewrites text into one of four registers (blog, threads, dc community style, gongmun official documents), each with its own rules and per-category humanizer switches, and (3) strips invisible Unicode characters and PNG/JPEG metadata (EXIF, XMP, IPTC, C2PA) with standard-library Python scripts, preserving Markdown code, emoji sequences, flag tags, and Hangul fillers after jamo. A verify step checks that numbers, URLs, links, image paths, and code blocks are unchanged. Original files are never overwritten. It does not remove statistical (token-sampling) or pixel watermarks and does not promise to evade AI detectors. Use it only on content you own. MIT licensed; includes MIT-licensed code from korean-humanizer and watermarks-remover (see NOTICE).
+k-maltu is a Claude Code skill for Korean text. It (1) removes "AI-sounding" Korean phrasing using the korean-humanizer catalog, (2) rewrites text into one of four registers (blog, threads, dc community style, gongmun official documents), each with its own rules and per-category humanizer switches, and (3) strips invisible Unicode characters and PNG/JPEG metadata (EXIF, XMP, IPTC, C2PA) with standard-library Python scripts, preserving Markdown code, emoji sequences, flag tags, and Hangul fillers after jamo. A verify step checks that numbers, URLs, links, image paths, and code blocks are unchanged. Original files are never overwritten. It does not remove statistical (token-sampling) or pixel watermarks and does not promise to evade AI detectors. Removing metadata does not remove any platform or legal duty to disclose AI-generated content. Use it only on content you own. MIT licensed; includes MIT-licensed code from korean-humanizer and watermarks-remover (see NOTICE).

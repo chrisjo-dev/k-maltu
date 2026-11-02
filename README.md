@@ -113,12 +113,11 @@ python3 -m unittest discover -s tests -v
 
 ---
 
-## 내 규칙 키우기
+## 검수하면서 규칙 키우기
 
-- `styles/personal.md`(git 제외)에 금지어, 선호어, 금지 문자 같은 개인 규칙을 적어 쓴다. 템플릿은 `styles/personal.example.md`.
-- 써 보다가 좋은 규칙에 `[승격 후보]`를 붙이고 "규칙 승격해줘"라고 하면, 에이전트가 **범용 규칙**(모두에게 좋음)과 **취향 규칙**(나에게만 좋음)으로 나눈다.
-  - 범용 규칙은 `bench/`의 시험지 24문항으로 실측해서 기존보다 나빠지지 않을 때만 `styles/base/`나 `registers/`에 들어간다.
-  - 취향 규칙은 `styles/presets/<이름>.md` 프리셋이 된다. 기본은 꺼져 있고 `preset: 이름`으로 켠다. 내 프리셋을 PR로 기여할 수도 있다.
+- 결과를 보다가 이상한 한국어가 있으면 그대로 지적하고 "검수 반영해줘"라고 하면 된다. 에이전트가 원인을 찾아 어느 규칙 파일에 무엇을 넣을지 제안하고, 승인한 것만 반영한다.
+- 반영한 뒤에는 지적한 글과 상관없는 문항까지 다시 돌려, 바뀐 부분을 하이라이팅한 HTML 보고서(`bench/tools/report.py`)로 보여 준다.
+- 나에게만 맞는 취향(예: 특정 문장 부호를 쓰지 않음)은 `styles/personal.md`(git 제외)에 적어 쓴다. 템플릿은 `styles/personal.example.md`.
 
 ## 스타 안내
 
@@ -146,8 +145,7 @@ SKILL.md              skill 진입점(워크플로우)
 registers/            말투 규칙 4개
 styles/base/          humanizer 카탈로그 고친 판 + CHANGES.md
 styles/personal.example.md   개인 규칙 템플릿
-styles/presets/       켜서 쓰는 취향 프리셋 + 템플릿
-bench/                규칙 실측용 시험지 24문항 + 채점 도구
+bench/                규칙 확인용 시험지 24문항 + 채점 도구 + 하이라이팅 보고서
 scripts/              inspect, clean_text, clean_images, verify, diff_upstream.sh
 vendor/               가져온 원본 그대로 + ORIGIN.md
 examples/             말투별 전후 예시(가상의 글)

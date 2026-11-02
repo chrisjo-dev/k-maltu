@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """k-maltu 실측 자동 채점.
 
-사용: python3 score.py <outputs/변형본 폴더> [...]
+사용: python3 score.py <outputs/변형본 폴더> [...] [--forbid=U+00B7 ...]
+금지 문자는 --forbid로 줄 때만 센다(기본 없음).
 문항별로 보존 사실, 통제형 변경 문장 수, 분량 비율, 가운뎃점, 숨은 문자를 검사해 표로 낸다.
 보존 사실 규칙(items.json):
   exact=true   원문 문자열이 결과에 그대로 있어야 함
@@ -83,6 +84,9 @@ def hidden_count(s: str) -> int:
     return sum(1 for ch in s if unicodedata.category(ch) == "Cf" and ch not in "‍️")
 
 
+FORBID: list[str] = []
+
+
 def score_dir(d: Path) -> list[dict]:
     rows = []
     for item in ITEMS:
@@ -100,7 +104,7 @@ def score_dir(d: Path) -> list[dict]:
             "preserve_ok": ok == total,
             "missing": missing,
             "ratio": round(chars(out) / max(1, chars(orig)), 2),
-            "middot": out.count("\u00b7"),
+            "middot": sum(out.count(ch) for ch in FORBID),
             "hidden": hidden_count(out),
         }
         if item["type"] == "통제형":
@@ -110,10 +114,13 @@ def score_dir(d: Path) -> list[dict]:
 
 
 def main(argv: list[str]) -> int:
+    global FORBID
+    FORBID = [chr(int(a.split("U+")[1], 16)) if "U+" in a else a.split("=", 1)[1] for a in argv if a.startswith("--forbid=")]
+    argv = [a for a in argv if not a.startswith("--forbid=")]
     all_rows = []
     for a in argv:
         all_rows += score_dir(Path(a))
-    print("| 변형본 | 문항 | 유형 | 보존 | 분량 | 가운뎃점 | 숨은문자 | 통제형 변경 | 빠진 사실 |")
+    print("| 변형본 | 문항 | 유형 | 보존 | 분량 | 금지문자 | 숨은문자 | 통제형 변경 | 빠진 사실 |")
     print("|---|---|---|---|---|---|---|---|---|")
     for r in all_rows:
         print(f"| {r['variant']} | {r['id']} | {r['type']} | {r['preserve']} | {r['ratio']} | {r['middot']} | {r['hidden']} | {r.get('changed', '')} | {', '.join(r['missing'])} |")
@@ -121,7 +128,7 @@ def main(argv: list[str]) -> int:
     by = {}
     for r in all_rows:
         by.setdefault(r["variant"], []).append(r)
-    print("| 변형본 | 문항 수 | 보존 완전 | 가운뎃점 | 숨은문자 | 통제형 과교정(변경 3개 이상) |")
+    print("| 변형본 | 문항 수 | 보존 완전 | 금지문자 | 숨은문자 | 통제형 과교정(변경 3개 이상) |")
     print("|---|---|---|---|---|---|")
     for v, rs in by.items():
         over = sum(1 for r in rs if r.get("changed", 0) >= 3)

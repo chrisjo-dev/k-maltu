@@ -1,15 +1,16 @@
 # bench: 규칙 실측용 시험지와 채점 도구
 
-규칙을 바꾸거나 `personal.md`의 규칙을 승격할 때, 기존보다 나빠지지 않았는지 확인하는 데 쓴다. 방법과 지난 결과는 `docs/EVALUATION.md`에 있다.
+규칙을 바꾸거나 검수 지적을 반영할 때, 기존보다 나빠지지 않았는지 확인하는 데 쓴다. 방법과 지난 결과는 `docs/EVALUATION.md`에 있다.
 
 ## 들어 있는 것
 
 - `items/`: 말투 4개 x 6문항 = 24문항(정리형 2, 변환형 3, 통제형 1). 모두 가상의 글이다.
   - 각 파일: frontmatter(보존해야 할 사실 `preserve` 등) + `## 원문` + `## 좋은 답이 갖출 점`(채점용)
 - `items.json`: 문항 목록
-- `tools/score.py`: 자동 채점(보존 사실, 통제형 변경 문장 수, 분량, 가운뎃점, 숨은 문자)
+- `tools/score.py`: 자동 채점(보존 사실, 통제형 변경 문장 수, 분량, 숨은 문자, `--forbid=U+00B7`처럼 준 금지 문자)
 - `tools/blind.py`: 답안 출처를 가리고 섞어 채점자용 묶음을 만든다
 - `tools/aggregate.py`: 채점 결과를 말투별로 모으고 기준선과 비교한다
+- `tools/report.py`: 반영 전후 결과를 원문 대비 하이라이팅한 HTML 검수 보고서(사람이 직접 볼 때)
 
 ## 돌리는 순서
 
@@ -17,6 +18,7 @@
 2. **자동 채점**:
    ```bash
    python3 bench/tools/score.py bench/outputs/*
+   python3 bench/tools/score.py bench/outputs/* --forbid=U+00B7   # 개인 금지 문자도 셀 때
    ```
 3. **이름 가리기**: 말투를 좁혀서 비교할 수 있다.
    ```bash
@@ -28,6 +30,14 @@
    ```bash
    python3 bench/tools/aggregate.py judging
    ```
+
+## 사람이 직접 검수할 때
+
+```bash
+python3 bench/tools/report.py bench bench/outputs/before bench/outputs/after review.html --blind
+```
+
+원문에서 지운 말은 취소선, 새로 쓴 말은 초록으로 보인다. `--blind`면 전후를 A/B로 가리고, 고른 뒤 "정답 보기"로 확인한다. 문항마다 더 나은 쪽과 지적을 남기고 "검수 결과 복사"로 채팅에 붙여 넣으면, 에이전트가 SKILL.md "검수 반영" 순서로 규칙에 옮긴다.
 
 ## 채택 기준
 
